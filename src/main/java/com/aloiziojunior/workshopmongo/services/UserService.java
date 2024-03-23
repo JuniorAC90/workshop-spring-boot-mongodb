@@ -22,11 +22,11 @@ public class UserService {
 	}
 	
 	public User findById(String id) {
-		Optional<User> optuUser = repo.findById(id);
-		if (optuUser.isEmpty()) {
+		Optional<User> optUser = repo.findById(id);
+		if (optUser.isEmpty()) {
 			throw new ObjectNotFoundException("Objeto não encontrado");
 		}
-		User user = optuUser.get();
+		User user = optUser.get();
 		return user;
 	}
 	
