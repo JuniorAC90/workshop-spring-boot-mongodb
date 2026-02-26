@@ -21,7 +21,10 @@ A aplicação consiste no registro de usuários juntamente com os seus posts e c
 
 ## Instalação e execução do MongoDB via Docker
 ```bash
+# criando o container
 docker run -d -p 27017:27017 -v /data/db --name mongo1 mongo:4.4.3-bionic
+
+# executando o container
 docker exec -it mongo1 bash
 ```
 
